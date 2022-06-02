@@ -25,7 +25,7 @@ flutter run
 Open your terminal and run the `flutter test` command.
 
 ```bash
-flutter run
+flutter test
 ```
 
 ## Modification and Improvements
