@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intrests/providers/provider.dart';
 import 'package:intrests/utils/const.dart';
@@ -11,7 +9,7 @@ import 'package:intrests/views/widgets/interest_frame.dart';
 import 'package:intrests/views/widgets/success_bottom_sheet.dart';
 
 class Home extends ConsumerWidget {
-  TextEditingController _search = TextEditingController();
+  final TextEditingController _search = TextEditingController();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final _viewModel = ref.watch(homeViewModel);

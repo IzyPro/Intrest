@@ -10,7 +10,6 @@ abstract class Routes {
 }
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
-  var args = settings.arguments;
   switch (settings.name) {
     case Routes.home:
       return MaterialPageRoute<dynamic>(

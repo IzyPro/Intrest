@@ -78,76 +78,80 @@ class LandingState extends State<Landing> with SingleTickerProviderStateMixin {
       child: Scaffold(
         backgroundColor: Theme.of(context).dialogBackgroundColor,
         body: Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: generalHorizontalPadding, vertical: topSpace),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              WordsButton(
-                press: () {},
-                firstText: 'Int',
-                secondText: 'rests',
-                secondTextColor: Theme.of(context).primaryColor,
-                textStyle: Theme.of(context)
-                    .primaryTextTheme
-                    .headline1
-                    ?.copyWith(fontSize: 40, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(
-                height: topSpace + topSpace,
-              ),
-              Stack(
-                children: [
-                  CustomPaint(
-                    painter: SpritePainter(_controller),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.width * 0.6,
+          padding: const EdgeInsets.only(
+              left: generalHorizontalPadding,
+              top: topSpace,
+              right: generalHorizontalPadding),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                WordsButton(
+                  press: () {},
+                  firstText: 'Int',
+                  secondText: 'rests',
+                  secondTextColor: Theme.of(context).primaryColor,
+                  textStyle: Theme.of(context)
+                      .primaryTextTheme
+                      .headline1
+                      ?.copyWith(fontSize: 40, fontWeight: FontWeight.w600),
+                ),
+                const SizedBox(
+                  height: topSpace + topSpace,
+                ),
+                Stack(
+                  children: [
+                    CustomPaint(
+                      painter: SpritePainter(_controller),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.width * 0.6,
+                      ),
                     ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Let's\nfind your\ninterests",
-                        style: Theme.of(context)
-                            .primaryTextTheme
-                            .headline1!
-                            .copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic),
-                      ),
-                      const SizedBox(
-                        height: ySpace1,
-                      ),
-                      Text(
-                        'Be faithful to your own taste, because\nnothing you really like is ever out of style',
-                        style: Theme.of(context).primaryTextTheme.headline4,
-                      ),
-                      const SizedBox(
-                        height: ySpace1,
-                      ),
-                      GestureDetector(
-                        child: Icon(
-                          Icons.arrow_right_alt_sharp,
-                          size: 60,
-                          color: Theme.of(context).canvasColor,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Let's\nfind your\ninterests",
+                          style: Theme.of(context)
+                              .primaryTextTheme
+                              .headline1!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic),
                         ),
-                        onTap: () async {
-                          _startAnimation();
-                          await Future.delayed(
-                              const Duration(seconds: 2),
-                              () =>
-                                  Navigator.of(context).pushNamed(Routes.home));
-                          _stopAnimation();
-                        },
-                      )
-                    ],
-                  ),
-                ],
-              )
-            ],
+                        const SizedBox(
+                          height: ySpace1,
+                        ),
+                        Text(
+                          'Be faithful to your own taste, because\nnothing you really like is ever out of style',
+                          style: Theme.of(context).primaryTextTheme.headline4,
+                        ),
+                        const SizedBox(
+                          height: ySpace1,
+                        ),
+                        GestureDetector(
+                          child: Icon(
+                            Icons.arrow_right_alt_sharp,
+                            size: 60,
+                            color: Theme.of(context).canvasColor,
+                          ),
+                          onTap: () async {
+                            _startAnimation();
+                            await Future.delayed(
+                                const Duration(seconds: 2),
+                                () => Navigator.of(context)
+                                    .pushNamed(Routes.home));
+                            _stopAnimation();
+                          },
+                        )
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

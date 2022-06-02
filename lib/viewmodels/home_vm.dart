@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intrests/models/interests_model.dart';
 
 class HomeViewModel extends ChangeNotifier {
   List<Interest> selected = <Interest>[];
   List<Interest> unSelected = <Interest>[];
-  HomeViewModel(Reader read) {
+  HomeViewModel() {
     unSelected = getAllInterests();
   }
 
