@@ -36,7 +36,6 @@ class CustomField extends StatelessWidget {
 
   final Function(String)? onCompleted;
   final String hint;
-  final _pinPutFocusNode = FocusNode();
   final Color? fillColor;
   final bool useNativeKeyboard;
   final double? width;
