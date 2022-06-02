@@ -2,6 +2,9 @@
 
 Built with Flutter and Riverpod, Intrests covers the basics of selecting items from a scattered list of interests with options to select between 3 and 7 interests, search the unselected list, unselect interests etc. It also covers functions and widget testing in flutter.
 
+# ![Screenshot](https://github.com/IzyPro/Intrest/blob/main/screenshot.png)
+# ![Screenshot](https://github.com/IzyPro/Intrest/blob/main/screenshot2.png)
+## Download
 Download the apk [here](https://drive.google.com/file/d/13B2WTQ3H-ZXQ32BNdeOal7LBYaeKAQ-m/view?usp=sharing) to see it in action.
 
 ## 
